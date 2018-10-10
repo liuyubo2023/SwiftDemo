@@ -38,13 +38,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 0:
             let firstVC = FirstViewController()
             self.navigationController?.pushViewController(firstVC, animated: true)
+        case 1:
+            let secondVC = SecondViewController()
+            self.navigationController?.pushViewController(secondVC, animated: true)
         default:
             break
         }
     }
     
     func titlesArray() -> NSArray {
-        return ["第一行","第一行","第一行"]
+        return ["第一行","第二行","第三行"]
     }
 }
 
