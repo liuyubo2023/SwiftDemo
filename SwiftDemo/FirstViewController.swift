@@ -38,8 +38,9 @@ class FirstViewController: UIViewController {
 //        let msg = "Hi"
 //        let txt = msg + str1!  // runtime error
         
-        stringIndex()
-        setDemo()
+//        stringIndex()
+//        setDemo()
+        package()
     }
     
     func isObjEqual<T:Equatable>(x: T,y: T) -> Bool {
@@ -71,5 +72,15 @@ class FirstViewController: UIViewController {
         dic = [:]
         
         var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+    }
+    
+    func package() {
+        var aString : String? = "Test"
+        print(aString!)
+        print(aString)
+        
+        var bString:String! = "Testttttttttt"
+        print(aString!)
+        print(aString)
     }
 }
