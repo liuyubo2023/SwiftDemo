@@ -30,6 +30,7 @@ class SecondViewController: UIViewController {
         print("Cuboid = \(Cu.volume)")
         
         package()
+        
     }
     
     func greet(person: String, address: String) -> String {
@@ -61,6 +62,20 @@ class SecondViewController: UIViewController {
         }
     }
     
+    struct Color {
+        var red, green, blue: Double
+        init(red: Double, green: Double, blue: Double) {
+            self.red   = red
+            self.green = green
+            self.blue  = blue
+        }
+        init(white: Double) {
+            red   = white
+            green = white
+            blue  = white
+        }
+    }
+    
     struct Cuboid {
         var width = 0.0, height = 0.0, depth = 0.0
         var volume: Double {
@@ -81,13 +96,16 @@ class SecondViewController: UIViewController {
         print(bString!)
         print(bString)
         
+        // 可选绑定
         var cString:String?
         if let str = cString {
             print(cString!)
         } else {
             print("aString have no value")
         }
-        var item : NSMutableArray
         
+        var re : Resolution! = Resolution(width: 20, height: 30)
+        print(re?.width)
+        print(re.height)
     }
 }
