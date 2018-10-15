@@ -41,6 +41,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 1:
             let secondVC = SecondViewController()
             self.navigationController?.pushViewController(secondVC, animated: true)
+        case 2:
+            let thirdVC = ThirdViewController()
+            self.navigationController?.pushViewController(thirdVC, animated: true)
         default:
             break
         }
