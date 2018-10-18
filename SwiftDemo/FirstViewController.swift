@@ -41,6 +41,8 @@ class FirstViewController: UIViewController {
 //        stringIndex()
 //        setDemo()
         package()
+        
+        var cool = UIColor.red
     }
     
     func isObjEqual<T:Equatable>(x: T,y: T) -> Bool {

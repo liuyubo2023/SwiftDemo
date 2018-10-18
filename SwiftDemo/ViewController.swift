@@ -44,13 +44,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 2:
             let thirdVC = ThirdViewController()
             self.navigationController?.pushViewController(thirdVC, animated: true)
+        case 3:
+            let fourthVC = FourthViewController()
+            fourthVC.closer = {
+                print($0)
+            }
+            self.navigationController?.pushViewController(fourthVC, animated: true)
         default:
             break
         }
     }
     
     func titlesArray() -> NSArray {
-        return ["第一行","第二行","第三行"]
+        return ["第一行","第二行","第三行","第四行"]
     }
 }
 

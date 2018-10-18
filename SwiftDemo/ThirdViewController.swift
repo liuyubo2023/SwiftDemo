@@ -89,6 +89,12 @@ extension Double {
     
 }
 
+extension Dictionary {
+    func valuesForKeys(keys:[Key]) -> [Value?] {
+        return keys.map {self[$0]}
+    }
+}
+
 extension Int {
     func repetions(task:() -> Void) {
         for _ in 0..<self {
