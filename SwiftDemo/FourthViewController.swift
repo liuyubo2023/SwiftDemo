@@ -14,7 +14,6 @@ class FourthViewController :  UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        
         if closer != nil {
             closer!("fourth")   
         }

@@ -50,13 +50,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print($0)
             }
             self.navigationController?.pushViewController(fourthVC, animated: true)
+        case 4:
+            let fifthVC = FifthViewController()
+            self.navigationController?.pushViewController(fifthVC, animated: true)
         default:
             break
         }
     }
     
     func titlesArray() -> NSArray {
-        return ["第一行","第二行","第三行","第四行"]
+        return ["第一行","第二行","第三行","第四行","测试UI"]
     }
 }
 
