@@ -11,6 +11,8 @@ import UIKit
 
 //扩展
 class ThirdViewController: UIViewController {
+    var delegate : ThirdViewDelegate?
+    
     override func viewDidLoad() {
         view.backgroundColor = UIColor.white
         let kilo = 3.km
@@ -30,6 +32,12 @@ class ThirdViewController: UIViewController {
         
         let stringIndex = findIndex(of: "area", in: ["mike","kobe","area"])
         print(stringIndex!)
+        
+        self.delegate?.printName(name: "yuboLiu")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     // 可变函数，修改值类型
@@ -53,6 +61,10 @@ class ThirdViewController: UIViewController {
         }
         return nil
     }
+}
+
+protocol ThirdViewDelegate {
+    func printName(name : String)
 }
 
 // 泛型实践

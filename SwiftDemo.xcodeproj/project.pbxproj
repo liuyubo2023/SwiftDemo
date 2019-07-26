@@ -19,6 +19,7 @@
 		3C8A07AE2156AB2B00B6B828 /* SwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A07AD2156AB2B00B6B828 /* SwiftDemoUITests.swift */; };
 		3C8A07BC2156BBB200B6B828 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A07BB2156BBB200B6B828 /* FirstViewController.swift */; };
 		3CBAF78D2180DD5400A078F8 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBAF78C2180DD5400A078F8 /* FifthViewController.swift */; };
+		3CBAF795218377ED00A078F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBAF794218377ED00A078F8 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3C8A07AF2156AB2B00B6B828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8A07BB2156BBB200B6B828 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3CBAF78C2180DD5400A078F8 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		3CBAF794218377ED00A078F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				3C5D253821710247004F6F87 /* ThirdViewController.swift */,
 				3C5D253A21763F38004F6F87 /* FourthViewController.swift */,
 				3CBAF78C2180DD5400A078F8 /* FifthViewController.swift */,
+				3CBAF794218377ED00A078F8 /* LoginViewController.swift */,
 				3C8A07912156AB2A00B6B828 /* Main.storyboard */,
 				3C8A07942156AB2B00B6B828 /* Assets.xcassets */,
 				3C8A07962156AB2B00B6B828 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 				3C5D2537216E65F0004F6F87 /* SecondViewController.swift in Sources */,
 				3C8A07BC2156BBB200B6B828 /* FirstViewController.swift in Sources */,
 				3C5D253921710247004F6F87 /* ThirdViewController.swift in Sources */,
+				3CBAF795218377ED00A078F8 /* LoginViewController.swift in Sources */,
 				3C8A07902156AB2A00B6B828 /* ViewController.swift in Sources */,
 				3C8A078E2156AB2A00B6B828 /* AppDelegate.swift in Sources */,
 				3CBAF78D2180DD5400A078F8 /* FifthViewController.swift in Sources */,

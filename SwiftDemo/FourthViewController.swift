@@ -14,6 +14,11 @@ class FourthViewController :  UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        
+        let timer = Timer(timeInterval: 1, target: self, selector: #selector(normalBlock), userInfo: nil, repeats: true)
+        RunLoop.current.add(timer, forMode: .default)
+        
+        
         if closer != nil {
             closer!("fourth")   
         }
@@ -42,7 +47,7 @@ class FourthViewController :  UIViewController{
         }
     }
     
-    func normalBlock() {
+    @objc func normalBlock() {
         let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
         
 //        let reversedNames = names.sorted()

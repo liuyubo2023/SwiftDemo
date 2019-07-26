@@ -29,6 +29,9 @@ class SecondViewController: UIViewController {
         let Cu = Cuboid(width: 12, height: 15, depth: 18)
         print("Cuboid = \(Cu.volume)")
         
+        let white = Color(white: 20)
+        print("white = \(white.red)")
+        
         package()
         
     }

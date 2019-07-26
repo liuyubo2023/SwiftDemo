@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,ThirdViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,10 +16,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         title = "首页"
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        okItem(name: "cell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         
     }
     
@@ -43,6 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.navigationController?.pushViewController(secondVC, animated: true)
         case 2:
             let thirdVC = ThirdViewController()
+            thirdVC.delegate = self
             self.navigationController?.pushViewController(thirdVC, animated: true)
         case 3:
             let fourthVC = FourthViewController()
@@ -60,6 +69,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func titlesArray() -> NSArray {
         return ["第一行","第二行","第三行","第四行","测试UI"]
+    }
+    
+    func printName(name: String) {
+        print(name)
+    }
+}
+
+extension ViewController {
+    func okItem(name : String) {
+        print(name)
     }
 }
 

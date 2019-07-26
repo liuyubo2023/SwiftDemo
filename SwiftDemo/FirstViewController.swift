@@ -82,7 +82,12 @@ class FirstViewController: UIViewController {
         print(aString)
         
         var bString:String! = "Testttttttttt"
-        print(aString!)
-        print(aString)
+        print(bString!)
+        print(bString)
     }
 }
+
+func compareVersion(_ version1 : String) {
+    version1.reversed()
+}
+

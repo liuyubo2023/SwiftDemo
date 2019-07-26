@@ -18,6 +18,8 @@ class FifthViewController: UIViewController {
         
         addLoginButton()
         addSignupButton()
+        
+        userDefaultsDemo()
     }
     
     func addLoginButton() {
@@ -37,8 +39,13 @@ class FifthViewController: UIViewController {
         view.addSubview(signupButton)
     }
     
+    func userDefaultsDemo() {
+        UserDefaults.standard.set(true, forKey: "right")
+    }
+    
     @objc func loginAction() {
-        print("login")
+        let vc : LoginViewController = LoginViewController()
+        navigationController?.pushViewController(vc, animated:true)
     }
     
 }
