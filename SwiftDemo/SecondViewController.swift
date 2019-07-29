@@ -9,8 +9,19 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    enum Name : CaseIterable {
+        case tom
+        case tony
+        case ybo
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var name = Name.tom
+        name = .ybo
+        let nameCount = Name.allCases.count
         
         title = "第二个"
         view.backgroundColor = UIColor.white

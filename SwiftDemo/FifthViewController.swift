@@ -45,6 +45,9 @@ class FifthViewController: UIViewController {
     
     @objc func loginAction() {
         let vc : LoginViewController = LoginViewController()
+        vc.closer = {
+            print($0)
+        }
         navigationController?.pushViewController(vc, animated:true)
     }
     

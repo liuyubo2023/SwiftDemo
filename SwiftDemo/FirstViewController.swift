@@ -8,15 +8,46 @@
 
 import UIKit
 
+
+
 class FirstViewController: UIViewController {
     var message: String = ""
-    
+    typealias Add = (_ num1: Int, _ num2: Int) -> (Int)
     
     override func viewDidLoad() {
         self.title = "第一个类"
         self.view.backgroundColor = UIColor.white
         
         let kName = "this is let name"
+        print(kName.startIndex)
+        
+        let addCloser : Add
+        
+        addCloser = {
+            (_ num1: Int, _ num2: Int) -> (Int) in
+            return num1 + num2
+        }
+        
+        let result = addCloser(2,5)
+        
+        var dic : [String : Any] = ["dic" : "dic", "name" : 3]
+        if #available(iOS 10, *) {
+            
+        } else {
+            
+        }
+        
+        
+        let softWrappedQuotation = """
+        The White Rabbit put on his spectacles.  "Where shall I begin, \
+        please your Majesty?" he asked.
+
+        "Begin at the beginning," the King said gravely, "and go on \
+        till you come to the end; then stop."
+        """
+        
+        print(softWrappedQuotation)
+        
         message = "message"
         message = kName
         // 元祖

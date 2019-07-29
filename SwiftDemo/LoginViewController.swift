@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class LoginViewController:  UIViewController{
+    
+    var closer : ((String) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationController?.isNavigationBarHidden = true
@@ -39,6 +42,7 @@ class LoginViewController:  UIViewController{
         let loginButton = UIButton(frame: CGRect(x: -200, y: 220, width: self.view.frame.width - 200, height: 40))
         loginButton.setTitle("Login", for: UIControl.State.normal)
         loginButton.backgroundColor = UIColor(red: 22/255.0, green: 139/255.0, blue: 3/255.0, alpha: 1)
+        loginButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside)
         self.view.addSubview(loginButton)
         
         UIView.animate(withDuration: 0.5) {
@@ -75,5 +79,14 @@ class LoginViewController:  UIViewController{
                 loginButton.center.x = self.view.center.x
             }, completion: nil)
         }
+    }
+}
+
+extension LoginViewController {
+    @objc func back()  {
+        if closer != nil {
+            closer!("name")
+        }
+        navigationController?.popViewController(animated: true)
     }
 }

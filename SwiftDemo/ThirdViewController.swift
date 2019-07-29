@@ -12,9 +12,19 @@ import UIKit
 //扩展
 class ThirdViewController: UIViewController {
     var delegate : ThirdViewDelegate?
-    
+    let num : Int? = 404
     override func viewDidLoad() {
         view.backgroundColor = UIColor.white
+        
+        if var cont = num {
+            cont = 5;
+            print(cont)
+        }
+        
+        
+        print(num!) // let 404 var 5
+        
+        
         let kilo = 3.km
         print(kilo)
         
@@ -81,7 +91,6 @@ struct Stack<Element> {
 extension Stack {
     var topItem: Element? {
         return items.isEmpty ? nil : items[items.count - 1]
-        items.last
     }
     
 }
