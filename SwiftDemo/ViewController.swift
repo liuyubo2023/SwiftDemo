@@ -62,13 +62,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 4:
             let fifthVC = FifthViewController()
             self.navigationController?.pushViewController(fifthVC, animated: true)
+        case 5:
+            let RXVC = RxSwiftViewController()
+            self.navigationController?.pushViewController(RXVC, animated: true)
+            
         default:
             break
         }
     }
     
     func titlesArray() -> NSArray {
-        return ["第一行","第二行","第三行","第四行","测试UI"]
+        return ["第一行","第二行","第三行","第四行","测试UI","RXSwift"]
     }
     
     func printName(name: String) {
