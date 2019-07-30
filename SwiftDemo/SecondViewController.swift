@@ -9,6 +9,19 @@
 import UIKit
 
 
+struct Student {
+    var chinese : Int
+    var math : Int
+    var english : Int
+    
+    init(stringScore: String) {
+        let cme = stringScore.characters.split(separator: ",")
+        chinese = Int(atoi(String(cme.first!)))
+        math = Int(atoi(String(cme[1])))
+        english = Int(atoi(String(cme.last!)))
+    }
+}
+
 class SecondViewController: UIViewController {
     
     enum Name : CaseIterable {
@@ -30,12 +43,10 @@ class SecondViewController: UIViewController {
         case ActionButton2 = "btn2_1.png"
     }
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let stu = Student(stringScore: "89,90,91")
         
         print(DetailViewImages.Background)
         
@@ -209,3 +220,4 @@ extension CSSColor {
         self = .rgb(gray, gray, gray)
     }
 }
+
