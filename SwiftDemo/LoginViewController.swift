@@ -11,7 +11,7 @@ import UIKit
 
 class LoginViewController:  UIViewController{
     
-    var closer : ((String) -> ())?
+    var closer : ((String) -> (Void))?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,18 +14,24 @@ class FourthViewController :  UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        
         let timer = Timer(timeInterval: 1, target: self, selector: #selector(normalBlock), userInfo: nil, repeats: true)
         RunLoop.current.add(timer, forMode: .default)
+        timer.invalidate()
         
         
         if closer != nil {
             closer!("fourth")   
         }
         normalBlock()
+//        let Optional<Int>.some(5)
+        let printBlcok = { (str : String) -> Void in
+            print(str)
+        }
         
-        let printBlcok = {print("Swift")}
-        printBlcok()
+//        let printBlcok = {
+//            print("Swift")
+//        }
+        printBlcok("name")
         
         let divide = {(val1: Int, val2: Int) -> Int in
              val1 / val2
@@ -45,6 +51,10 @@ class FourthViewController :  UIViewController{
         combine1(num: 2016) { (text, text1) -> (Void) in
             print("\(text) \(text1)")
         }
+        
+        common { (name) in
+            print(name);
+        }
     }
     
     @objc func normalBlock() {
@@ -58,6 +68,10 @@ class FourthViewController :  UIViewController{
         for item in reversedNames {
             print(item)
         }
+    }
+    
+    func common(mo name : (String) -> Void) {
+        name("common");
     }
     
 //    func printBlock() {

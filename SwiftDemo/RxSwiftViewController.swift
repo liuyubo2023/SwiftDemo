@@ -13,6 +13,7 @@ import RxCocoa
 class RxSwiftViewController : UIViewController {
     
     let bag = DisposeBag()
+    var subscription:Disposable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,15 @@ class RxSwiftViewController : UIViewController {
         button.rx.tap.subscribe(onNext: {
             print("button Tapped")
         }).disposed(by: bag)
+        
+        let taps: Observable<Void> = button.rx.tap.asObservable()
+        
+        let textfield = UITextField(frame: CGRect(x: 100, y: 250, width: 50, height: 200))
+        view.addSubview(textfield)
+        subscription = textfield.rx.text.subscribe { (text) in
+            print(text)
+        }
+//        textfield.rx.text.orEmpty.bind(to: button.rx.isHidden)
         
         
     }
