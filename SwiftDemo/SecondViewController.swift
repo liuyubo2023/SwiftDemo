@@ -15,7 +15,6 @@ struct Student {
     var english : Int
     
     init(stringScore: String) {
-        
         let cme = stringScore.characters.split(separator: ",")
         chinese = Int(atoi(String(cme.first!)))
         math = Int(atoi(String(cme[1])))
