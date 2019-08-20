@@ -119,4 +119,3 @@ class FirstViewController: UIViewController {
 func compareVersion(_ version1 : String) {
     version1.reversed()
 }
-
