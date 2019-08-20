@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-struct Student {
+struct Student {    
     var chinese : Int
     var math : Int
     var english : Int
@@ -55,6 +54,7 @@ class SecondViewController: UIViewController {
         if case Ex.Mode(let ab, let cd) = Ex.Mode(ab: 4, cd: 5) {
             print(ab+cd)
         }
+        
         // vs tuples:
         let tp = (ab: 4,cd : 4)
         print(tp.ab)

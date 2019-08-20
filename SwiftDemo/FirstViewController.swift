@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class FirstViewController: UIViewController {
     var message: String = ""
     typealias Add = (_ num1: Int, _ num2: Int) -> (Int)

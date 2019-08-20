@@ -70,6 +70,7 @@ class FourthViewController :  UIViewController{
         }
     }
     
+    
     func common(mo name : (String) -> Void) {
         name("common");
     }
