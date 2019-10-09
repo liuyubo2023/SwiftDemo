@@ -25,7 +25,6 @@ class FirstViewController: UIViewController {
             (_ num1: Int, _ num2: Int) -> (Int) in
             return num1 + num2
         }
-        
         let result = addCloser(2,5)
         
         var dic : [String : Any] = ["dic" : "dic", "name" : 3]
