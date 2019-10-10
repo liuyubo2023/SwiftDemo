@@ -19,7 +19,6 @@ final class PageTitleView: UIView {
     init(With frame: CGRect,  configutation: PageTitleConfigure, delegate: PageTitleDelegate?) {
         super.init(frame: .zero)
         self.delegate = delegate
-        print("revert")
     }
     
     required init?(coder: NSCoder) {
