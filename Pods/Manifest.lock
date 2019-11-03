@@ -5,11 +5,13 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SGPagingView (1.6.7)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - RxCocoa (~> 5.0)
   - RxSwift (~> 5.0)
+  - SGPagingView (~> 1.6.7)
   - SnapKit
 
 SPEC REPOS:
@@ -17,14 +19,16 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SGPagingView
     - SnapKit
 
 SPEC CHECKSUMS:
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SGPagingView: 21152cbb9e25a7259ea2415b028c22f55f362ea2
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 23a62138bb6ab667587d05f6d227c7f89721986b
+PODFILE CHECKSUM: 62e62eea522157e80ff17f86a0c3cbd7c620b054
 
 COCOAPODS: 1.7.1

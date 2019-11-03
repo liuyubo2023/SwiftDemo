@@ -128,6 +128,7 @@
 		3C8A078C2156AB2A00B6B828 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				96E1C9BA236F338E00568951 /* SegmentView */,
 				3C8A078D2156AB2A00B6B828 /* AppDelegate.swift */,
 				3C8A078F2156AB2A00B6B828 /* ViewController.swift */,
 				3C8A07BB2156BBB200B6B828 /* FirstViewController.swift */,
@@ -142,8 +143,6 @@
 				3C8A07942156AB2B00B6B828 /* Assets.xcassets */,
 				3C8A07962156AB2B00B6B828 /* LaunchScreen.storyboard */,
 				3C8A07992156AB2B00B6B828 /* Info.plist */,
-				9651CCD6234E422100267B80 /* PageTitleView.swift */,
-				9651CCD8234E425600267B80 /* PageTitleConfigure.swift */,
 				9651CCDC235777EF00267B80 /* Single.swift */,
 				96E1C9B6235C82D200568951 /* RedView.swift */,
 			);
@@ -183,6 +182,15 @@
 				8C95D27FEB97D0FCA340E419 /* Pods-SwiftDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		96E1C9BA236F338E00568951 /* SegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				9651CCD6234E422100267B80 /* PageTitleView.swift */,
+				9651CCD8234E425600267B80 /* PageTitleConfigure.swift */,
+			);
+			path = SegmentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

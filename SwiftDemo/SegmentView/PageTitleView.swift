@@ -14,15 +14,33 @@ protocol PageTitleDelegate: class {
 }
 
 final class PageTitleView: UIView {
-    private weak var delegate: PageTitleDelegate?
+    public var selectedIndex = 0
     
-    init(With frame: CGRect,  configutation: PageTitleConfigure, delegate: PageTitleDelegate?) {
+    private weak var delegate: PageTitleDelegate?
+    private let titleNames: [String]
+    private let configutation: PageTitleConfigure
+    
+    init(With frame: CGRect, delegate: PageTitleDelegate?, titleNames:[String], configutation: PageTitleConfigure) {
+        self.titleNames = titleNames
+        self.configutation = configutation
         super.init(frame: .zero)
         self.delegate = delegate
+        self.setupSubViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - private method
+extension PageTitleView {
+    private func setupSubViews() {
+        
+    }
+}
+
+// MARK: - public method
+extension PageTitleView {
     
 }
