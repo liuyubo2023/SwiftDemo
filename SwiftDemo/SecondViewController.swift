@@ -45,6 +45,11 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let emptyView = UIView.init(frame: .zero)
+        view.addSubview(emptyView)
+        let redView = RedView()
+        emptyView.addSubview(redView)
+        
         let stu = Student(stringScore: "89,90,91")
         
         print(DetailViewImages.Background)
@@ -110,6 +115,10 @@ class SecondViewController: UIViewController {
         print("color1 = \(color1), color2 = \(color2)") // prints color1 = red, color2 = #AAAAAA
         let color3 = CSSColor.init(gray: 0xAA)
         print("color3 = \(color3)")  // print color3 = #AAAAAA
+    }
+    
+    override var traitCollection: UITraitCollection {
+        return UITraitCollection.init(horizontalSizeClass: .unspecified)
     }
     
     func greet(person: String, address: String) -> String {

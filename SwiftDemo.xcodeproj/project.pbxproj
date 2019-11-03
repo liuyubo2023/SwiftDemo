@@ -24,6 +24,9 @@
 		961A805222EEE32800624680 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A805122EEE32800624680 /* RxSwiftViewController.swift */; };
 		9651CCD7234E422100267B80 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651CCD6234E422100267B80 /* PageTitleView.swift */; };
 		9651CCD9234E425600267B80 /* PageTitleConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651CCD8234E425600267B80 /* PageTitleConfigure.swift */; };
+		9651CCDB235380F800267B80 /* RxTablevViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651CCDA235380F800267B80 /* RxTablevViewController.swift */; };
+		9651CCDD235777EF00267B80 /* Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651CCDC235777EF00267B80 /* Single.swift */; };
+		96E1C9B7235C82D200568951 /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E1C9B6235C82D200568951 /* RedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		961A805122EEE32800624680 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		9651CCD6234E422100267B80 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		9651CCD8234E425600267B80 /* PageTitleConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleConfigure.swift; sourceTree = "<group>"; };
+		9651CCDA235380F800267B80 /* RxTablevViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTablevViewController.swift; sourceTree = "<group>"; };
+		9651CCDC235777EF00267B80 /* Single.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Single.swift; sourceTree = "<group>"; };
+		96E1C9B6235C82D200568951 /* RedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
 		CD1F40D36BED9A1D525B915F /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE64265A1897938012DDAE62 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,12 +137,15 @@
 				3CBAF78C2180DD5400A078F8 /* FifthViewController.swift */,
 				3CBAF794218377ED00A078F8 /* LoginViewController.swift */,
 				961A805122EEE32800624680 /* RxSwiftViewController.swift */,
+				9651CCDA235380F800267B80 /* RxTablevViewController.swift */,
 				3C8A07912156AB2A00B6B828 /* Main.storyboard */,
 				3C8A07942156AB2B00B6B828 /* Assets.xcassets */,
 				3C8A07962156AB2B00B6B828 /* LaunchScreen.storyboard */,
 				3C8A07992156AB2B00B6B828 /* Info.plist */,
 				9651CCD6234E422100267B80 /* PageTitleView.swift */,
 				9651CCD8234E425600267B80 /* PageTitleConfigure.swift */,
+				9651CCDC235777EF00267B80 /* Single.swift */,
+				96E1C9B6235C82D200568951 /* RedView.swift */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -351,13 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E1C9B7235C82D200568951 /* RedView.swift in Sources */,
 				3C5D253B21763F38004F6F87 /* FourthViewController.swift in Sources */,
 				3C5D2537216E65F0004F6F87 /* SecondViewController.swift in Sources */,
+				9651CCDB235380F800267B80 /* RxTablevViewController.swift in Sources */,
 				9651CCD7234E422100267B80 /* PageTitleView.swift in Sources */,
 				3C8A07BC2156BBB200B6B828 /* FirstViewController.swift in Sources */,
 				3C5D253921710247004F6F87 /* ThirdViewController.swift in Sources */,
 				3CBAF795218377ED00A078F8 /* LoginViewController.swift in Sources */,
 				9651CCD9234E425600267B80 /* PageTitleConfigure.swift in Sources */,
+				9651CCDD235777EF00267B80 /* Single.swift in Sources */,
 				961A805222EEE32800624680 /* RxSwiftViewController.swift in Sources */,
 				3C8A07902156AB2A00B6B828 /* ViewController.swift in Sources */,
 				3C8A078E2156AB2A00B6B828 /* AppDelegate.swift in Sources */,

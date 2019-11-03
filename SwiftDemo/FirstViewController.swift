@@ -13,6 +13,9 @@ class FirstViewController: UIViewController {
     typealias Add = (_ num1: Int, _ num2: Int) -> (Int)
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Single.shared.vc = self
         self.title = "第一个类"
         self.view.backgroundColor = UIColor.white
         
@@ -71,6 +74,10 @@ class FirstViewController: UIViewController {
         package()
         
         var cool = UIColor.red
+    }
+    
+    deinit {
+        print("denit")
     }
     
     func isObjEqual<T:Equatable>(x: T,y: T) -> Bool {

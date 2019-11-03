@@ -10,25 +10,39 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,ThirdViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+//    private let defalutIndexPath = IndexPath(row: 0, section: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "首页"
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-        okItem(name: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+
+        tableView.rx.contentOffset
+            .map { $0.y }
+            .subscribe(onNext: {
+                print("contentOffset.x = \($0)")
+            })
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if let vc = Single.shared.vc {
+            print("has")
+        } else {
+            print("nil")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+        if let vc = Single.shared.vc {
+            print("has")
+        } else {
+            print("nil")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
         switch indexPath.row {
         case 0:
             let firstVC = FirstViewController()
@@ -64,24 +79,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.navigationController?.pushViewController(fifthVC, animated: true)
         case 5:
             let RXVC = RxSwiftViewController()
+            if let _ = Single.shared.vc {
+                print("has")
+            } else {
+                print("nil")
+            }
             self.navigationController?.pushViewController(RXVC, animated: true)
-            
+        case 6:
+            let RXTA = RxTableViewController()
+            self.navigationController?.pushViewController(RXTA, animated: true)
         default:
             break
         }
     }
     
     func titlesArray() -> NSArray {
-        return ["第一行","第二行","第三行","第四行","测试UI","RXSwift"]
+        return ["第一行","第二行","第三行","第四行","测试UI","RXSwift","RXTableView"]
     }
     
     func printName(name: String) {
-        print(name)
-    }
-}
-
-extension ViewController {
-    func okItem(name : String) {
         print(name)
     }
 }

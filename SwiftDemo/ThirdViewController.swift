@@ -8,13 +8,45 @@
 
 import Foundation
 import UIKit
+import SnapKit
+import RxCocoa
+import RxSwift
 
 //扩展
 class ThirdViewController: UIViewController {
     var delegate : ThirdViewDelegate?
     let num : Int? = 404
+    
+    private let testView = UIView()
+    private var testViewHeight = 100
+    
     override func viewDidLoad() {
         view.backgroundColor = UIColor.white
+        
+        view.addSubview(testView)
+        testView.backgroundColor = .red
+        testView.snp_makeConstraints { (make) in
+            make.top.left.equalToSuperview().offset(100)
+            make.right.equalToSuperview().offset(-100)
+            make.height.equalTo(testViewHeight)
+        }
+        
+        
+        let button = UIButton()
+        view.addSubview(button)
+        button.snp_makeConstraints { (make) in
+            make.top.left.equalToSuperview().offset(100)
+            make.left.equalToSuperview().offset(0)
+            make.height.width.equalTo(100)
+        }
+        let _ = button.rx.tap.subscribe { [unowned self] (_) in
+            self.testViewHeight = self.testViewHeight + 20
+            self.testView.snp_updateConstraints { (make) in
+                make.height.equalTo(self.testViewHeight)
+            }
+        }
+        
+        
         
         if var cont = num {
             cont = 5;

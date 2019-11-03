@@ -35,8 +35,53 @@ class RxSwiftViewController : UIViewController {
         subscription = textfield.rx.text.subscribe { (text) in
             print(text)
         }
+        
+    
 //        textfield.rx.text.orEmpty.bind(to: button.rx.isHidden)
         
+        behaviorDemo()
+        toOber()
+        mapDemo()
+        emptyDemo()
+    }
+    
+    func behaviorDemo() {
+        let subject = BehaviorRelay(value: ["1"])
         
+        subject.accept(subject.value + ["2"])
+        subject.asObservable().subscribe {
+            print("第一次订阅",$0)
+        }.disposed(by: bag)
+        
+        
+    }
+    
+    func toOber() {
+        let singleElementSequence = Observable.just(32)
+
+        _ = singleElementSequence
+            .subscribe { event in
+                print(event)
+        }
+    }
+    
+    func mapDemo() {
+        let originalSequence = Observable.of(1, 2, 3)
+            
+        originalSequence
+            .map { number in
+                number * 2
+            }
+            .subscribe { print($0) }
+            .disposed(by: bag)
+    }
+    
+    func emptyDemo() {
+        let disposeBag = DisposeBag()
+        Observable<Int>.empty()
+            .subscribe { event in
+                print(event)
+            }
+            .disposed(by: disposeBag)
     }
 }
