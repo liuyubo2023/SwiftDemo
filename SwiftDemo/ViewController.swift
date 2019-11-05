@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,ThirdViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 //    private let defalutIndexPath = IndexPath(row: 0, section: 0)
+    private var btnArr = [UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(btnArr.count)
         
         title = "首页"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
